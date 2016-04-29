@@ -19,10 +19,12 @@
         var widgetConfig = modalData.widgetConfig;
 
         // public variables
-        ctrl.accountsDropdownPlaceholder = 'Please select an account...';
-        ctrl.accounts = cloudData.getAccounts();
-        ctrl.accountsDropdownDisabled = (ctrl.accounts.length <= 0);
+        ctrl.asvDropdownPlaceholder = 'Please select an ASV...';
+        ctrl.ASVs = cloudData.getASV();
+        ctrl.asvDropdownDisabled = (ctrl.ASVs.length <= 0);
         ctrl.selectedItem = undefined;
+
+
 
         // public methods
         ctrl.submit = function (valid) {
@@ -44,6 +46,5 @@
                 $modalInstance.close(postObj);
             }
         }
-
     }
 })();
