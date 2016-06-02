@@ -50,6 +50,7 @@ var localStorageSupported = (function () {
         // intercepting the http provider allows us to use relative routes
         // in data providers and then redirect them to a remote api if
         // necessary
+        
         function ($httpProvider) {
             $httpProvider.interceptors.push(function () {
                 return {
