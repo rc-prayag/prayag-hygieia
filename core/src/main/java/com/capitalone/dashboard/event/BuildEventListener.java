@@ -45,6 +45,7 @@ public class BuildEventListener extends HygieiaMongoEventListener<Build> {
      * the failed builds bucket on the pipeline
      * @param failedBuild
      */
+     
     private void processFailedBuild(Build failedBuild){
         List<Dashboard> teamDashboardsReferencingBuild = findAllDashboardsForBuild(failedBuild);
         for(Dashboard teamDashboard : teamDashboardsReferencingBuild){
